@@ -1,0 +1,29 @@
+
+<html>
+    <head>
+        <title>javascript window</title>
+    </head>
+    <script type="text/javascript">
+        function doOpenWindow(str) {
+            var childWindow = window.open();
+            childWindow.document.title = str;
+            childWindow.document.write(str);
+        }
+
+        function delayOpenWindow(str) {
+            setTimeout(function function_name() {
+                doOpenWindow(str);
+            }, 6000);
+        }
+
+        function delayOpenMulWindow() {
+            for (var i = 0; i < 5; i++) {
+                delayOpenWindow("javascript child window " + i);
+            }
+        }
+    </script>
+    <body onload="delayOpenMulWindow()">
+        javascript window test
+    </body>
+</html>
+
