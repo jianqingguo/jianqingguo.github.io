@@ -4,21 +4,19 @@
         <title>javascript window</title>
     </head>
     <script type="text/javascript">
-        function doOpenWindow(str) {
-            var childWindow = window.open();
-            childWindow.document.title = str;
-            childWindow.document.write(str);
+        function doOpenWindow() {
+            window.open("https://jianqingguo.github.io/x5_sdk_cts/test_hello_world.html");
         }
 
-        function delayOpenWindow(str) {
+        function delayOpenWindow() {
             setTimeout(function function_name() {
-                doOpenWindow(str);
+                doOpenWindow();
             }, 6000);
         }
 
         function delayOpenMulWindow() {
             for (var i = 0; i < 5; i++) {
-                delayOpenWindow("javascript child window " + i);
+                delayOpenWindow();
             }
         }
     </script>
